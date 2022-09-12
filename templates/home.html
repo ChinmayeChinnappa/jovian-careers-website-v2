@@ -10,6 +10,7 @@
           height: 360px;
           width: 100%;
           object-fit: cover;
+          margin-bottom: 16px;
         }
       </style>
   </head>
@@ -17,15 +18,23 @@
     
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img id="banner" class="img-fluid" src="https://jovian-careers-website.chinmaye-chinna.repl.co/static/banner.jpg" >
     <div class="container">
-    <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
-    <img id="banner" class="img-fluid" src="https://jovian-careers-website.chinmaye-chinna.repl.co/static/banner.jpg" alt="" height="320">
-    <h2>
-    <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-    <p class="lead">
+      <h1 class="text-center mt-2 mb-4">Jovian Careers
+      </h1>
+      <div class="row">  
+        <div class="col-6">
+      <p class="lead">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <h2 class="text-center mt-2 mb-4">Job Positions</h2>
+      </p>
+        </div>
+        <div class="col-6">
+      <img src="/static/people.jpg" style="height:320px;">
+        </div> 
+      </div>  
+    <h2 class="text-center mt-2 mb-4">Job Positions
+    </h2>    
       {% for job in jobs %}
         {% include 'jobitem.html' %}
       {% endfor %}
@@ -35,5 +44,6 @@
     </div>
       <p class="text-center mt-2">Copyrights 2022, Jovian</p>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
